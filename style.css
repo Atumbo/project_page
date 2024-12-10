@@ -1,163 +1,227 @@
-
-* {
+/* Global styles */
+body {
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #212121;
+    color: #EAE7DC;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f9f9f9; /* Subtle background */
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden;
-    padding: 0 20px;
-}
-
-/* Header Section */
 header {
-    background: #1d3557;  /* Professional dark blue */
-    color: #fff;
+    background-color: #212121;
+    color: #EAE7DC;
+    padding: 80px 0; /* Increase padding for more space */
     text-align: center;
-    padding: 80px 20px;
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the text horizontally */
+    height: 200px; /* Ensure header has enough height */
 }
 
 header h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    font-size: 48px; /* Increase font size for a more prominent header */
+    margin: 0;
+    letter-spacing: 2px;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 20px; /* Increase font size of the subheading */
+    margin-top: 10px;
     font-weight: 300;
-    opacity: 0.8;
+    max-width: 800px; /* Set a max width to prevent the text from stretching too wide */
+    line-height: 1.5;
+    text-align: center; /* Center align the paragraph */
 }
 
-/* Main Content Section */
-main {
-    padding: 40px 0;
-}
-
-h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #1d3557;  /* Dark blue */
-    margin-bottom: 20px;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: #e63946;  /* Accent red color */
-    margin: 20px auto;
-}
-
+/* Section for projects */
 .section {
-    margin-bottom: 60px;
+    padding: 60px 0;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
 }
 
-/* About Section */
-#about p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Project Container */
 .project-container {
     display: flex;
-    gap: 30px;
-    justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
-    padding: 20px 0;
+    justify-content: center;
 }
 
-/* Project Cards */
-.project-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 350px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 30px;
+/* Card Styling */
+/* From Uiverse.io by gharsh11032000 */ 
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #212121;
+    border: 2px solid #313131;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #EAE7DC;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
-
-.project-info {
-    padding: 20px;
-    text-align: left;
+  
+.content .heading {
+    font-weight: 700;
+    font-size: 32px;
 }
-
-.project-info h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1d3557;
-    margin-bottom: 10px;
+  
+.content .para {
+    line-height: 1.5;
 }
-
-.project-info p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.project-info a {
-    font-size: 1.1rem;
-    color: #e63946; /* Red for links */
+  
+.content .btn {
+    color: #e8e8e8;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: #0974f1;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.card:hover {
+    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+    border-color: #0974f1;
+}
+  
+.content .btn:hover {
+    outline: 2px solid #EAE7DC;
+    background: transparent;
+    color: #EAE7DC;
+    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+    border-color: #0974f1;
+}
+  
+.content .btn:active {
+    box-shadow: none;
 }
 
-.project-info a:hover {
-    color: #1d3557; /* Blue on hover */
-}
 
-/* Footer Styling */
+/* From Uiverse.io by vinodjangid07 */ 
+.card_footer {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  
+  /* linkdin*/
+  .containerThree:hover {
+    box-shadow: 0 0 20px #0072b1;
+    border-color: #0072b1;
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    box-shadow: 0 0 20px #128C7E;
+    border-color: #128C7E;
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: #EAE7DC;
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+
+
+
+
+
+/* Footer */
 footer {
-    background-color: #1d3557;
-    color: white;
+    background-color: #212121;
+    color: #EAE7DC;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
-    box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
 }
 
 footer p {
-    margin: 0;
-    font-size: 1rem;
+    font-size: 14px;
 }
 
-/* Responsive Design */
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+    header p {
+        font-size: 16px;
+    }
     .project-container {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        max-width: 90%;
-    }
-
-    h2 {
-        font-size: 2rem;
+        gap: 15px;
     }
 }
