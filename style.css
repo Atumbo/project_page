@@ -40,9 +40,16 @@ header p {
     padding: 60px 0;
 }
 
+
+
 .container {
     width: 90%;
     margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 45px;
+    text-align: center; /* Center align the paragraph */
 }
 
 .project-container {
