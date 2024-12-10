@@ -215,20 +215,62 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    .card {
-        width: 100%; /* Full width on small screens */
+    body {
+        padding: 0 10px; /* Add padding to prevent content touching screen edges */
     }
-}
 
-@media (max-width: 768px) {
+    header {
+        height: auto; /* Allow header height to adjust */
+        padding: 50px 0; /* Reduce padding for compact header */
+    }
+
     header h1 {
-        font-size: 36px;
+        font-size: 28px; /* Smaller heading for phones */
     }
+
     header p {
-        font-size: 16px;
+        font-size: 14px; /* Smaller subheading */
+        max-width: 100%; /* Allow full-width text */
     }
+
     .project-container {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: column; /* Stack cards vertically */
+        gap: 10px; /* Smaller gaps */
+    }
+
+    .card {
+        width: 100%; /* Full-width for small screens */
+        padding: 20px; /* Reduce padding for compact look */
+    }
+
+    .content .heading {
+        font-size: 24px; /* Adjust card heading size */
+    }
+
+    .content .para {
+        font-size: 14px; /* Smaller paragraph font */
+    }
+
+    .content .btn {
+        font-size: 14px; /* Smaller button text */
+        padding: 8px; /* Compact button size */
+    }
+
+    footer p {
+        font-size: 12px; /* Adjust footer text */
+    }
+
+    .card_footer {
+        flex-wrap: wrap; /* Allow footer icons to wrap */
+        gap: 10px; /* Smaller gaps between icons */
+    }
+
+    .socialContainer {
+        width: 40px;
+        height: 40px; /* Resize social icons */
+    }
+
+    .socialSvg {
+        width: 14px; /* Resize social SVGs */
     }
 }
