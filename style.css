@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #212121;
     color: #EAE7DC;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 header {
@@ -54,9 +55,12 @@ header p {
 
 .project-container {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
+    width: 100%; /* Ensure it doesn't overflow */
+    margin: 0 auto; /* Center-align container */
+    padding: 0 10px; /* Add padding to prevent edge overflow */
 }
 
 /* Card Styling */
@@ -66,14 +70,16 @@ header p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 320px;
+    width: 100%; /* Responsive width */
+    max-width: 320px; /* Maximum width limit */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    padding: 32px;
+    padding: 20px; /* Reduce padding */
     overflow: hidden;
     border-radius: 10px;
     background: #212121;
     border: 2px solid #313131;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 0 auto; /* Center align */
 }
   
 .content {
@@ -214,7 +220,7 @@ footer p {
     font-size: 14px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 375px) {
     body {
         padding: 0 10px; /* Add padding to prevent content touching screen edges */
     }
@@ -239,8 +245,8 @@ footer p {
     }
 
     .card {
-        width: 100%; /* Full-width for small screens */
-        padding: 20px; /* Reduce padding for compact look */
+        width: 100%; /* Make cards take full width */
+        padding: 20px; /* Reduce padding */
     }
 
     .content .heading {

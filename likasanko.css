@@ -1,0 +1,277 @@
+/* Global styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+    color: #EAE7DC;
+}
+
+header {
+    background-color: #212121;
+    color: #EAE7DC;
+    padding: 80px 0; /* Increase padding for more space */
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the text horizontally */
+    height: 200px; /* Ensure header has enough height */
+}
+
+header h1 {
+    font-size: 48px; /* Increase font size for a more prominent header */
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 20px; /* Increase font size of the subheading */
+    margin-top: 10px;
+    font-weight: 300;
+    max-width: 800px; /* Set a max width to prevent the text from stretching too wide */
+    line-height: 1.5;
+    text-align: center; /* Center align the paragraph */
+}
+
+/* Section for projects */
+.section {
+    padding: 60px 0;
+}
+
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 45px;
+    text-align: center; /* Center align the paragraph */
+}
+
+.project-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card Styling */
+/* From Uiverse.io by gharsh11032000 */ 
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #212121;
+    border: 2px solid #313131;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+  
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #EAE7DC;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+  
+.content .heading {
+    font-weight: 700;
+    font-size: 32px;
+}
+  
+.content .para {
+    line-height: 1.5;
+}
+  
+.content .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: #0974f1;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.card:hover {
+    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+    border-color: #0974f1;
+}
+  
+.content .btn:hover {
+    outline: 2px solid #EAE7DC;
+    background: transparent;
+    color: #EAE7DC;
+    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+    border-color: #0974f1;
+}
+  
+.content .btn:active {
+    box-shadow: none;
+}
+
+
+/* From Uiverse.io by vinodjangid07 */ 
+.card_footer {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  
+  /* linkdin*/
+  .containerThree:hover {
+    box-shadow: 0 0 20px #0072b1;
+    border-color: #0072b1;
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    box-shadow: 0 0 20px #128C7E;
+    border-color: #128C7E;
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: #EAE7DC;
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #212121;
+    color: #EAE7DC;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 0 10px; /* Add padding to prevent content touching screen edges */
+    }
+
+    header {
+        height: auto; /* Allow header height to adjust */
+        padding: 50px 0; /* Reduce padding for compact header */
+    }
+
+    header h1 {
+        font-size: 28px; /* Smaller heading for phones */
+    }
+
+    header p {
+        font-size: 14px; /* Smaller subheading */
+        max-width: 100%; /* Allow full-width text */
+    }
+
+    .project-container {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 10px; /* Smaller gaps */
+    }
+
+    .card {
+        max-width: 320px; /* Limit the card's maximum width */
+        padding: 20px; /* Adjust padding for smaller screens */
+        margin: 0 auto; /* Center align the card */
+    }
+
+    .content .heading {
+        font-size: 24px; /* Adjust card heading size */
+    }
+
+    .content .para {
+        font-size: 14px; /* Smaller paragraph font */
+    }
+
+    .content .btn {
+        font-size: 14px; /* Smaller button text */
+        padding: 8px; /* Compact button size */
+    }
+
+    footer p {
+        font-size: 12px; /* Adjust footer text */
+    }
+
+    .card_footer {
+        flex-wrap: wrap; /* Allow footer icons to wrap */
+        gap: 10px; /* Smaller gaps between icons */
+    }
+
+    .socialContainer {
+        width: 40px;
+        height: 40px; /* Resize social icons */
+    }
+
+    .socialSvg {
+        width: 14px; /* Resize social SVGs */
+    }
+}
