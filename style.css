@@ -1,282 +1,188 @@
-/* Global styles */
-body {
-    font-family: 'Inter', sans-serif;
+/* AI generated */
+* {
     margin: 0;
     padding: 0;
-    background-color: #212121;
-    color: #EAE7DC;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+    background: #212121; /* Subtle background */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding: 0 20px;
+}
+
+/* Header Section */
 header {
-    background-color: #212121;
+    background: #212121;  /* Professional dark blue */
     color: #EAE7DC;
-    padding: 80px 0; /* Increase padding for more space */
     text-align: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center the text horizontally */
-    height: 200px; /* Ensure header has enough height */
+    padding: 80px 20px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 48px; /* Increase font size for a more prominent header */
-    margin: 0;
-    letter-spacing: 2px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 20px; /* Increase font size of the subheading */
-    margin-top: 10px;
+    font-size: 1.2rem;
     font-weight: 300;
-    max-width: 800px; /* Set a max width to prevent the text from stretching too wide */
-    line-height: 1.5;
-    text-align: center; /* Center align the paragraph */
+    opacity: 0.8;
 }
 
-/* Section for projects */
+/* Main Content Section */
+main {
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #EAE7DC;  /* Dark blue */
+    margin-bottom: 20px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #EAE7DB;  /* Accent red color */
+    margin: 20px auto;
+}
+
 .section {
-    padding: 60px 0;
+    margin-bottom: 60px;
 }
-
-
 
 .container {
-    width: 90%;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.section h2 {
-    font-size: 45px;
-    text-align: center; /* Center align the paragraph */
+/* About Section */
+#about p {
+    font-size: 1.2rem;
+    color: #EAE7DC;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
+/* Project Container */
 .project-container {
     display: flex;
+    gap: 30px;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    width: 100%; /* Ensure it doesn't overflow */
-    margin: 0 auto; /* Center-align container */
-    padding: 0 10px; /* Add padding to prevent edge overflow */
+    padding: 20px 0;
 }
 
-/* Card Styling */
-/* From Uiverse.io by gharsh11032000 */ 
-.card {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Responsive width */
-    max-width: 320px; /* Maximum width limit */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    padding: 20px; /* Reduce padding */
-    overflow: hidden;
-    border-radius: 10px;
-    background: #212121;
-    border: 2px solid #313131;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    margin: 0 auto; /* Center align */
+/* Project Cards */
+.project-card {
+    background-color: #212121;
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 30px;
 }
-  
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    color: #EAE7DC;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px #EAE7DC;
+    border-color: #EAE7DC;
 }
-  
-.content .heading {
-    font-weight: 700;
-    font-size: 32px;
+
+.project-info {
+    padding: 20px;
+    text-align: left;
 }
-  
-.content .para {
-    line-height: 1.5;
-}
-  
-.content .btn {
-    color: #e8e8e8;
-    text-decoration: none;
-    padding: 10px;
+
+.project-info h3 {
+    font-size: 1.5rem;
     font-weight: 600;
-    border: none;
-    cursor: pointer;
-    background: #0974f1;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-  
-.card:hover {
-    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
-    border-color: #0974f1;
-}
-  
-.content .btn:hover {
-    outline: 2px solid #EAE7DC;
-    background: transparent;
     color: #EAE7DC;
-    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
-    border-color: #0974f1;
-}
-  
-.content .btn:active {
-    box-shadow: none;
+    margin-bottom: 10px;
 }
 
+.project-info p {
+    font-size: 1rem;
+    color: #EAE7DB;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 
-/* From Uiverse.io by vinodjangid07 */ 
-.card_footer {
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #212121;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 25px;
-    gap: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
-  }
-  
-  /* for all social containers*/
-  .socialContainer {
-    width: 52px;
-    height: 52px;
-    border-radius: 5px;
-    background-color: #212121;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition-duration: .3s;
-  }
-  
-  /* linkdin*/
-  .containerThree:hover {
-    box-shadow: 0 0 20px #0072b1;
-    border-color: #0072b1;
-    background-color: #0072b1;
-    transition-duration: .3s;
-  }
-  /* Whatsapp*/
-  .containerFour:hover {
-    box-shadow: 0 0 20px #128C7E;
-    border-color: #128C7E;
-    background-color: #128C7E;
-    transition-duration: .3s;
-  }
-  
-  .socialContainer:active {
-    transform: scale(0.9);
-    transition-duration: .3s;
-  }
-  
-  .socialSvg {
-    width: 17px;
-  }
-  
-  .socialSvg path {
-    fill: #EAE7DC;
-  }
-  
-  .socialContainer:hover .socialSvg {
-    animation: slide-in-top 0.3s both;
-  }
-  
-  @keyframes slide-in-top {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  
+.project-info a {
+    font-size: 1.1rem;
+    color: #EAE7DB; /* Red for links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
+.project-info a:hover {
+    color: #666; /* Blue on hover */
+}
 
-
-
-
-/* Footer */
+/* Footer Styling */
 footer {
     background-color: #212121;
-    color: #EAE7DC;
-    padding: 20px 0;
+    color: #EAE7DB;
     text-align: center;
-    margin-top: 40px;
+    padding: 20px;
+    box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
-    font-size: 14px;
+    margin: 0;
+    font-size: 1rem;
 }
 
-@media (max-width: 375px) {
-    body {
-        padding: 0 10px; /* Add padding to prevent content touching screen edges */
-    }
-
-    header {
-        height: auto; /* Allow header height to adjust */
-        padding: 50px 0; /* Reduce padding for compact header */
-    }
-
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
     header h1 {
-        font-size: 28px; /* Smaller heading for phones */
+        font-size: 25px;
     }
-
     header p {
-        font-size: 14px; /* Smaller subheading */
-        max-width: 100%; /* Allow full-width text */
+        font-size: medium;
     }
 
     .project-container {
-        flex-direction: column; /* Stack cards vertically */
-        gap: 10px; /* Smaller gaps */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .card {
-        width: 100%; /* Make cards take full width */
-        padding: 20px; /* Reduce padding */
+    .project-card {
+        max-width: 90%;
     }
 
-    .content .heading {
-        font-size: 24px; /* Adjust card heading size */
+    #about h2 {
+        font-size: 20px;
     }
 
-    .content .para {
-        font-size: 14px; /* Smaller paragraph font */
+    #about p {
+        font-size: medium;
     }
 
-    .content .btn {
-        font-size: 14px; /* Smaller button text */
-        padding: 8px; /* Compact button size */
+    #projects .container h2 {
+        font-size: 20px;
     }
 
-    footer p {
-        font-size: 12px; /* Adjust footer text */
+    #projects .project-info h3 {
+        font-size: 18px;
     }
 
-    .card_footer {
-        flex-wrap: wrap; /* Allow footer icons to wrap */
-        gap: 10px; /* Smaller gaps between icons */
-    }
-
-    .socialContainer {
-        width: 40px;
-        height: 40px; /* Resize social icons */
-    }
-
-    .socialSvg {
-        width: 14px; /* Resize social SVGs */
+    #projects .project-info p {
+        font-size: 15px;
     }
 }
